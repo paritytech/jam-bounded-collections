@@ -1,0 +1,37 @@
+[package]
+name = "jam-bounded-collections"
+version = "0.1.0"
+description = "Bounded types and their supporting traits"
+readme = "README.md"
+rust-version = "1.79.0"
+authors = ["Parity Technologies <admin@parity.io>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/paritytech/parity-common"
+repository = "https://github.com/paritytech/parity-common"
+
+[dependencies]
+serde = { version = "1.0.101", default-features = false, features = ["alloc", "derive"], optional = true }
+scale-codec = { package = "parity-scale-codec", version = "3.7.4", default-features = false, features = ["max-encoded-len"], optional = true }
+scale-info = { version = ">=1.0, <3", default-features = false, features = ["derive"], optional = true }
+log = { version = "0.4.17", default-features =  false }
+schemars = { version = ">=0.8.12", optional = true }
+jam-codec = { version = "0.1.0", default-features = false, features = ["derive","max-encoded-len"], optional = true }
+
+[dev-dependencies]
+serde_json = "1.0.41"
+
+[features]
+default = [
+    "std",
+    "scale-codec"
+]
+json-schema = ["dep:schemars"]
+std = [
+    "log/std",
+    "jam-codec/std",
+    "scale-codec/std",
+    "scale-info/std",
+    "serde/std",
+]
+scale-codec = [ "scale-info" ]
