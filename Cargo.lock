@@ -21,6 +21,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "bounded-collections-next"
+version = "0.1.0"
+dependencies = [
+ "jam-codec",
+ "log",
+ "parity-scale-codec",
+ "scale-info",
+ "schemars",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "byte-slice-cast"
 version = "1.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -122,19 +135,6 @@ name = "itoa"
 version = "1.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4a5f13b858c8d314ee3e8f639011f7ccefe71f97f96e50151fb991f267928e2c"
-
-[[package]]
-name = "jam-bounded-collections"
-version = "0.1.0"
-dependencies = [
- "jam-codec",
- "log",
- "parity-scale-codec",
- "scale-info",
- "schemars",
- "serde",
- "serde_json",
-]
 
 [[package]]
 name = "jam-codec"

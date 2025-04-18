@@ -60,8 +60,8 @@ impl<T: Default> Get<T> for () {
 ///
 /// # Example
 /// ```
-/// use bounded_collections::Get;
-/// use bounded_collections::GetInto;
+/// use bounded_collections_next::Get;
+/// use bounded_collections_next::GetInto;
 ///
 /// struct MyGetter;
 /// impl Get<u16> for MyGetter { fn get() -> u16 { 42 } }
@@ -166,8 +166,8 @@ pub trait TryCollect<C> {
 /// # Examples
 ///
 /// ```
-/// # use bounded_collections::Get;
-/// # use bounded_collections::parameter_types;
+/// # use bounded_collections_next::Get;
+/// # use bounded_collections_next::parameter_types;
 /// // This function cannot be used in a const context.
 /// fn non_const_expression() -> u64 { 99 }
 ///

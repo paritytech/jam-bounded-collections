@@ -1,5 +1,5 @@
 [package]
-name = "jam-bounded-collections"
+name = "bounded-collections-next"
 version = "0.1.0"
 description = "Bounded types and their supporting traits"
 readme = "README.md"
@@ -22,10 +22,7 @@ jam-codec = { version = "0.1.0", default-features = false, features = ["derive",
 serde_json = "1.0.41"
 
 [features]
-default = [
-    "std",
-    "scale-codec"
-]
+default = ["std"]
 json-schema = ["dep:schemars"]
 std = [
     "log/std",
